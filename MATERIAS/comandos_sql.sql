@@ -2,7 +2,7 @@ CREATE DATABASE Nome_da_BD;
 DROP DATABASE Nome_da_BD;
 USE Nome_da_BD;
 
-Show databases;
+Show databases; 
 Select database();
 
 Show tables;
@@ -21,7 +21,7 @@ nomeCidade VARCHAR(50) DEFAULT ‘Faro’,
 telefone NUMERIC(9,0) UNIQUE,
 FOREIGN KEY (n_aluno) REFERENCES Aluno (n_aluno),
 PRIMARY KEY (n_aluno, cod_disc, data_insc) (Chave composta)
-}
+);
 
 ALTER TABLE Aluno ADD (email VARCHAR(30));
 ALTER TABLE Aluno CHANGE email email_novo varchar(20);
