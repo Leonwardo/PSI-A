@@ -15,7 +15,7 @@ CREATE TABLE Permissoes(
 CREATE TABLE Funcionarios(
     Id_func VARCHAR(5) PRIMARY KEY,
     Nome_func VARCHAR(50) NOT NULL,
-    BI_func TEXT(9) UNIQUE,
+    BI_func INT(9) UNIQUE,
     Telefone_func TEXT(9) NOT NULL,
     Morada_func VARCHAR(30) NOT NULL,
     Cidade_func VARCHAR(10) NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE Departamentos(
 CREATE TABLE Fornecedores(
     Id_forn VARCHAR(5) PRIMARY KEY,
     Nome_forn VARCHAR(20) NOT NULL,
-    Nif_forn TEXT(9) UNIQUE,
+    Nif_forn INT(9) UNIQUE,
     Morada_forn VARCHAR(50) NOT NULL,
     Cidade_forn VARCHAR(10) NOT NULL,
     Telefone_forn TEXT(9) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Fornecedores(
 CREATE TABLE Cliente(
     Id_clien VARCHAR(5) PRIMARY KEY,
     Nome_clien VARCHAR(20) NOT NULL,
-    BI_clien TEXT(9) UNIQUE,
+    BI_clien INT(9) UNIQUE,
     Morada_clien VARCHAR(50) NOT NULL,
     Cidade_clien VARCHAR(10) NOT NULL,
     Email_clien VARCHAR(30) NOT NULL,
@@ -196,9 +196,11 @@ DROP INDEX idx_nome_func ON Funcionarios;
 
 SHOW TABLES;
 
-SHOW COLUMNS FROM Funcionarios;
+SHOW COLUMNS FROM Cliente;
 
-SELECT * FROM Funcionarios WHERE Salario_func > 1500;
+SELECT * FROM Cliente;
+
+
 
 
 # Transações
